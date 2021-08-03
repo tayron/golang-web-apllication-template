@@ -1,0 +1,9 @@
+FROM golang
+
+MAINTAINER Hospeda App <ti@hospeda.app>
+
+WORKDIR /home
+
+ENTRYPOINT ./web_application
+
+EXPOSE 80

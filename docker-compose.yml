@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    hospeda.app:
+        container_name: hospeda.app
+        build:
+            context: .
+            dockerfile: docker-build
+        volumes:
+            - ./:/home
+        command: sh -c "/home/web_application"
+        environment:            
+            - ENVIROMENT=production
+            - URL=https://www.hospeda.app
+            - PORT=80
