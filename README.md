@@ -7,7 +7,7 @@ Aplicação web básica feito com **go** contendo:
 * Script de deploy usado no ambiente de produção
 
 
-## Executar aplicação localmente
+## Executar aplicação localmente sem usar container docker
 ```sh 
 ./run.sh
 ```
@@ -66,6 +66,11 @@ Packed 1 file.
 tayron@tayron:~
 ```
 ## Executar aplicação utilizando container docker ou deploy no servidor de produção
+
+Abra o arquivo docker-compose.yml e altere ```URL=http://localhost``` para o endereço do seu site, exemplo: ```URL=https://www.hospeda.app```.
+Caso deseje testar o container localmente, basta deixar como ```URL=http://localhost```.
+
+Logo em seguida execute:
 ```sh 
 ./deploy.sh
 ```

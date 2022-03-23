@@ -1,8 +1,9 @@
 #!/bin/bash
 
 diretorioAplicacao="$(pwd)"
-nomeAplicacao="hospeda.app"
-nomeAplicacaoTesteUnitario="hospeda.app_test"
+nomeBinarioAplicacao="web_application"
+nomeBinarioAplicacaoTesteUnitario="web_application_test"
+nomeContainerDocker="hospeda.app"
 
 echo && \
 echo "---------------------------------------------------------" && \
@@ -27,7 +28,7 @@ echo && \
 echo "---------------------------------------------------------" && \
 echo "Rodando testes unitário:" && \
 echo "---------------------------------------------------------" && \
-./$nomeAplicacaoTesteUnitario && \
+./$nomeBinarioAplicacaoTesteUnitario && \
 
 echo && \
 echo "---------------------------------------------------------" && \
@@ -48,7 +49,7 @@ echo && \
 echo "---------------------------------------------------------" && \
 echo "Restartando a aplicação:" && \
 echo "---------------------------------------------------------" && \
-docker restart $nomeAplicacao && \
+docker restart $nomeContainerDocker && \
 
 echo && \
 echo && \
@@ -56,6 +57,6 @@ echo "---------------------------------------------------------" && \
 echo "Obtendo ip da aplicação:" && \
 echo "---------------------------------------------------------" && \
 echo && \
-docker inspect -f '{{range .NetworkSettings.Networks}}| {{.IPAddress}} {{end}}' $nomeAplicacao && \
+docker inspect -f '{{range .NetworkSettings.Networks}}| {{.IPAddress}} {{end}}' $nomeContainerDocker && \
 echo 
 echo

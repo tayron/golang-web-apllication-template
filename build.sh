@@ -1,7 +1,7 @@
 #!/bin/bash
 
-nomeAplicacao="hospeda.app"
-nomeAplicacaoTesteUnitario="hospeda.app_test"
+nomeAplicacao="web_application"
+nomeAplicacaoTesteUnitario="web_application_test"
 
 clear
 echo "---------------------------------------------------------" && \

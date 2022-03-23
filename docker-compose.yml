@@ -7,9 +7,8 @@ services:
             context: .
             dockerfile: docker-build
         volumes:
-            - ./:/home
-        command: sh -c "/home/web_application"
-        environment:            
+            - ./:/aplicacao
+        environment: 
             - ENVIROMENT=production
-            - URL=https://www.hospeda.app
+            - URL=http://localhost
             - PORT=80
