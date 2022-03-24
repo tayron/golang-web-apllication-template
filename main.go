@@ -5,6 +5,7 @@ import (
 	"googleauth/application"
 	"net/http"
 	"os"
+	"time"
 
 	"log"
 
@@ -16,6 +17,10 @@ var clientId string = "845986572673-lcte5kb6hipc4dcg10fc79j4s9emca61.apps.google
 var clientSecred string = "niLaSNdNsG9Vq19YgA_Dmams"
 
 func main() {
+
+	// Configurando timezone
+	var timeZone = time.FixedZone("America/Sao_Paulo", -3*3600)
+	time.Local = timeZone
 
 	key := "webapplication" // Replace with your SESSION_SECRET or similar
 	maxAge := 86400 * 30    // 30 days
