@@ -7,6 +7,7 @@ Aplicação web básica feito com **go** contendo:
 * Script de deploy usado no ambiente de produção
 
 ## Para trabalhar com TimeZone personalizado
+Referência: https://programmerah.com/how-to-set-time-zone-in-golang-23094/
 ```sh
 var cstSh, _ = time.LoadLocation("Asia/Shanghai") //ShangHai
 fmt.Println("SH : ", time.Now().In(cstSh).Format("2006-01-02 15:04:05"))
