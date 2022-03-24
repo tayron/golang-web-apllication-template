@@ -6,6 +6,11 @@ Aplicação web básica feito com **go** contendo:
 * Script para geração do binário da aplicação para uso em produção
 * Script de deploy usado no ambiente de produção
 
+## Para trabalhar com TimeZone personalizado
+```sh
+var cstSh, _ = time.LoadLocation("Asia/Shanghai") //ShangHai
+fmt.Println("SH : ", time.Now().In(cstSh).Format("2006-01-02 15:04:05"))
+```
 
 ## Executar aplicação localmente sem usar container docker
 ```sh 
