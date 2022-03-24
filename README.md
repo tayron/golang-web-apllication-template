@@ -9,8 +9,16 @@ Aplicação web básica feito com **go** contendo:
 ## Para trabalhar com TimeZone personalizado
 Referência: https://programmerah.com/how-to-set-time-zone-in-golang-23094/
 ```sh
-var cstSh, _ = time.LoadLocation("Asia/Shanghai") //ShangHai
-fmt.Println("SH : ", time.Now().In(cstSh).Format("2006-01-02 15:04:05"))
+var timeZone, _ = time.LoadLocation("America/Sao_Paulo") //ShangHai
+fmt.Println("SH : ", time.Now().In(timeZone).Format("2006-01-02 15:04:05"))
+```
+
+Para realizar configuração global do Timezone, realizar a configuração abaixo na função main
+```sh
+func main() {
+	var timeZone = time.FixedZone("America/Sao_Paulo", 8*3600) 
+	time.Local = timeZone
+}
 ```
 
 ## Executar aplicação localmente sem usar container docker
