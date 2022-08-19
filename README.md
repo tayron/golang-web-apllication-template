@@ -1,4 +1,4 @@
-# Go Web Apllication Server
+# Golang Web Apllication Server
 
 Aplicação web básica feito com **go** contendo:
 * Testes unitários
